@@ -20,7 +20,22 @@ const UserData = [
     suluk: "Dummy",
     Kaji: "Dummy",
     riwayat_penyakit: "Dummy",
-    password: bcrypt.hashSync("admin123", saltRounds)
+    password: bcrypt.hashSync("Dummy 1", saltRounds)
+}),
+new UsersModel({
+    namalengkap: "Dummy 1",
+    username: "Username 1",
+    role: "aktivis",
+    email: "Dummy Email",
+    tempatlahir: "Dummy Place",
+    tanggallahir: Date.now(),
+    pekerjaan: "Dummy Work",
+    nomorhp: "+628123123123",
+    tahunmasuk: 2015,
+    suluk: "Dummy",
+    Kaji: "Dummy",
+    riwayat_penyakit: "Dummy",
+    password: bcrypt.hashSync("Dummy", saltRounds)
 })]
 
 async function createSeeder(){
