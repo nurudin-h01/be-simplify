@@ -2,8 +2,6 @@ const UsersModel = require("../models/users.model");
 const bcrypt = require("bcrypt");
 const saltRounds = 10;
 const { generateToken, verifyToken } = require("../helpers");
-// const loginByGoogle = require("../helpers/google.auth");
-// const registerByGoogle = require("../helpers/google.auth");
 
 class UsersController {
     static async login(req, res){

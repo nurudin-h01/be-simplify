@@ -30,9 +30,25 @@ const userSchema = new mongoose.Schema(
 			maxlength: 20,
             default: "Dummy Place"
 		},
+		statuskelas: [
+			{
+				kelas: {
+					type: mongoose.Types.ObjectId,
+					ref: "Class",
+				},	
+				status: {
+					type: String,
+                    enum: ["Simpan", "Waiting", "Proses", "Diterima", "Kosong"],
+                    default: "Kosong"
+				},
+				motivasi: {
+					type: String,
+				}
+			},{_id: false}
+		],
 		tanggallahir: {
 			type: Date,
-            default: Date.now,
+            default: Date.now(),
 		},
         pekerjaan: {
 			type: String,
